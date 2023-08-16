@@ -2,13 +2,15 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    iOsSpecific:Page.UseSafeArea="true"
+    BackgroundColor="#193335"
     x:Class="game_kai_workspace.MainPage">
     
     <StackLayout
         BackgroundColor="#193335">
         <Label
-           Padding="40"
-           Text="Kai's Workspace"
+            Text="Kai's Workspace"
            TextColor="Brown"
            VerticalOptions="Center"
            HorizontalOptions="Center"/>
@@ -56,12 +58,14 @@
             </Grid>
         </Grid>
             <Button Text="Open Inventory"
-                    Font="Large"
+                    Font="Medium"
                     BorderWidth="1"
-                    VerticalOptions="Center"
+                    VerticalOptions="End"
                     HorizontalOptions="Center"
-                    Padding="20, 20, 20, 20"
+                    Padding="20, 0, 20, 0"
                     Clicked="OnButtonClicked"
+                    BackgroundColor="Brown"
+                    TextColor="#193335"
             />
     </StackLayout>
 
