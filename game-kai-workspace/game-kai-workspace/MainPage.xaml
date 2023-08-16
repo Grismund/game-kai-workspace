@@ -1,24 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="game_kai_workspace.MainPage">
-
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="game_kai_workspace.MainPage">
+    
+    <StackLayout
+        BackgroundColor="#193335">
+        <Label
+           Padding="40"
+           Text="Kai's Workspace"
+           TextColor="Brown"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"/>
+        <Grid>
+            <Image
+                Source="neo.gif"
+                IsAnimationPlaying="True"
+                Aspect="AspectFill"/>
+            <Grid
+                Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                    x:Name="mainText"
+                    Grid.Row="1"
+                    Padding="20"
+                    Text="Kai's workspace is a mess. As bad as it looks, there are signs that she (or someone) was here not too long ago."
+                    HorizontalOptions="Center"
+                    TextColor="Bisque"/>
+                <Picker 
+                    x:Name="picker"
+                    Grid.Row="2"
+                    SelectedIndexChanged="OptionSelected"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Title="Select what you do..."
+                    TitleColor="#193335"
+                    BackgroundColor="Brown">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Pet the cat</x:String>
+                            <x:String>Take the camera</x:String>
+                            <x:String>Look at the game system</x:String>
+                            <x:String>Pick up the phone</x:String>
+                            <x:String>Examine the beakers</x:String>
+                            <x:String>Play the video tape</x:String>
+                            <x:String>Eat the sushi</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+        </Grid>
+            <Button Text="Open Inventory"
+                    Font="Large"
+                    BorderWidth="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="20, 20, 20, 20"
+                    Clicked="OnButtonClicked"
+            />
     </StackLayout>
 
 </ContentPage>
