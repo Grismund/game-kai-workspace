@@ -133,4 +133,13 @@
       <Name>game-kai-workspace</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\briefcase.png" />
+    <BundleResource Include="Resources\gun.png" />
+    <BundleResource Include="Resources\neo.gif" />
+    <BundleResource Include="Resources\notepad.png" />
+    <BundleResource Include="Resources\pills.png" />
+    <BundleResource Include="Resources\portrait.png" />
+    <BundleResource Include="Resources\sd-card.png" />
+  </ItemGroup>
 </Project>
