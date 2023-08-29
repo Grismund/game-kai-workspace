@@ -4,7 +4,10 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewModels1="clr-namespace:game_kai_workspace.ViewModels;assembly=game-kai-workspace"
-    x:Class="game_kai_workspace.InventoryModal">
+    xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    iOsSpecific:Page.UseSafeArea="true"
+    x:Class="game_kai_workspace.InventoryModal"
+    BackgroundColor="LightSlateGray">
     
     <ContentPage.BindingContext>
         <viewModels1:ItemsViewModel />
@@ -12,51 +15,51 @@
     
     <ContentPage.Content>
         <StackLayout
-            Padding="20, 20, 20, 20">
-            <Label Text="You have 0 items in your inventory."
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-            <ListView ItemsSource="{Binding Items}">
+            Padding="20">
+            <Label 
+                Text="You have 0 items in your inventory."
+                HorizontalOptions="CenterAndExpand" />
+            <ListView 
+                ItemsSource="{Binding Items}"
+                HasUnevenRows="True"
+                BackgroundColor="LightSlateGray">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-
-                                <!-- Image in the left column -->
-                                <Image Grid.Column="0"
-                                       Source="{Binding ImageSource}"
-                                       WidthRequest="100"
-                                       HeightRequest="100"
-                                       VerticalOptions="CenterAndExpand" />
-
-                                <!-- Name and Description in the second column -->
-                                <StackLayout Grid.Column="1"
-                                             Margin="10"
-                                             VerticalOptions="CenterAndExpand">
-                                    <Label Text="{Binding Name}"
-                                           FontSize="18"
-                                           FontAttributes="Bold"
-                                           Margin="0,0,0,-5" />
-                                    <Label Text="{Binding Description}"
-                                           FontSize="14"
-                                           TextColor="Gray" />
+                            <StackLayout
+                                Orientation="Horizontal">
+                                <Image 
+                                    Source="{Binding ImageSource}"
+                                    HeightRequest="60"
+                                    WidthRequest="60"
+                                    VerticalOptions="Center" />
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    Padding="20, 20, 20, 20">
+                                    <Label 
+                                        Text="{Binding Name}"
+                                        FontSize="Large"
+                                        FontAttributes="Bold" />
+                                    <Label 
+                                        Text="{Binding Description}"
+                                        FontSize="Small"
+                                        FontAttributes="Italic" />
                                 </StackLayout>
-                            </Grid>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Close Inventory"
-                    Font="Large"
-                    BorderWidth="1"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"
-                    Padding="20, 20, 20, 20"
-                    Clicked="OnButtonClicked"
+            <Button 
+                Text="Close Inventory"
+                Font="Medium"
+                BorderWidth="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Padding="20, 0, 20, 0"
+                Clicked="OnButtonClicked"
+                BackgroundColor="Brown"
+                TextColor="#193335"
             />
         </StackLayout>
     </ContentPage.Content>

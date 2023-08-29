@@ -11,9 +11,11 @@
         BackgroundColor="#193335">
         <Label
             Text="Kai's Workspace"
-           TextColor="Brown"
-           VerticalOptions="Center"
-           HorizontalOptions="Center"/>
+            FontSize="Large"
+            FontAttributes="Bold"
+            TextColor="Brown"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
         <Grid>
             <Image
                 Source="neo.gif"
@@ -57,17 +59,13 @@
                 </Picker>
             </Grid>
         </Grid>
-            <Button 
-                Text="Open Inventory"
-                Font="Medium"
-                BorderWidth="1"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Padding="20, 0, 20, 0"
-                Clicked="OnButtonClicked"
-                BackgroundColor="Brown"
-                TextColor="#193335"
-            />
+        <Button 
+            ImageSource="briefcase.png"
+            HeightRequest="75"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnButtonClicked"
+        />
     </StackLayout>
 </ContentPage>
 
