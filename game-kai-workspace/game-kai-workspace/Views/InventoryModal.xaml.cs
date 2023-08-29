@@ -20,6 +20,7 @@ namespace game_kai_workspace
         async private void OnButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+            
         }
     }
 }

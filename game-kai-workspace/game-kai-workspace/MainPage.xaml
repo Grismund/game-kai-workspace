@@ -57,17 +57,17 @@
                 </Picker>
             </Grid>
         </Grid>
-            <Button Text="Open Inventory"
-                    Font="Medium"
-                    BorderWidth="1"
-                    VerticalOptions="End"
-                    HorizontalOptions="Center"
-                    Padding="20, 0, 20, 0"
-                    Clicked="OnButtonClicked"
-                    BackgroundColor="Brown"
-                    TextColor="#193335"
+            <Button 
+                Text="Open Inventory"
+                Font="Medium"
+                BorderWidth="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Padding="20, 0, 20, 0"
+                Clicked="OnButtonClicked"
+                BackgroundColor="Brown"
+                TextColor="#193335"
             />
     </StackLayout>
-
 </ContentPage>
 
