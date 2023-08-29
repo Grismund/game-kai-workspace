@@ -15,12 +15,12 @@ namespace game_kai_workspace
         public InventoryModal()
         {
             InitializeComponent();
+            // BindingContext = new ViewModels.ItemsViewModel();
         }
 
-        async private void OnButtonClicked(object sender, EventArgs e)
+        private async void OnButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
-            
         }
     }
 }
