@@ -3,15 +3,12 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewModels1="clr-namespace:game_kai_workspace.ViewModels;assembly=game-kai-workspace"
+    xmlns:viewModels="clr-namespace:game_kai_workspace.ViewModels;assembly=game-kai-workspace"
     xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     iOsSpecific:Page.UseSafeArea="true"
     x:Class="game_kai_workspace.InventoryModal"
-    BackgroundColor="LightSlateGray">
-    
-    <ContentPage.BindingContext>
-        <viewModels1:ItemsViewModel />
-    </ContentPage.BindingContext>
+    BackgroundColor="LightSlateGray" 
+    >
     
     <ContentPage.Content>
         <StackLayout
@@ -20,7 +17,7 @@
                 Text="You have 0 items in your inventory."
                 HorizontalOptions="CenterAndExpand" />
             <ListView 
-                ItemsSource="{Binding Items}"
+                ItemsSource="{Binding ObtainedItems}"
                 HasUnevenRows="True"
                 BackgroundColor="LightSlateGray">
                 <ListView.ItemTemplate>

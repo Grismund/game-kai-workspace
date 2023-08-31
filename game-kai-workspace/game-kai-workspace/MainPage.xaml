@@ -25,14 +25,14 @@
                 Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label
                     x:Name="mainText"
                     Grid.Row="1"
-                    Padding="20"
+                    Margin="30"
                     Text="Kai's workspace is a mess. As bad as it looks, there are signs that she (or someone) was here not too long ago."
                     HorizontalOptions="Center"
                     TextColor="Bisque"/>
@@ -48,11 +48,11 @@
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Pet the cat</x:String>
-                            <x:String>Take the camera</x:String>
                             <x:String>Look at the game system</x:String>
                             <x:String>Pick up the phone</x:String>
-                            <x:String>Examine the beakers</x:String>
                             <x:String>Play the video tape</x:String>
+                            <x:String>Examine the beakers</x:String>
+                            <x:String>Take the camera</x:String>
                             <x:String>Eat the sushi</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
