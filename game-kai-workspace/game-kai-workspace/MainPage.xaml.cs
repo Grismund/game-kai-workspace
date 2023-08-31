@@ -14,7 +14,7 @@ namespace game_kai_workspace
         {
             InitializeComponent();
             
-            viewModel = new ItemsViewModel();
+            // viewModel = new ItemsViewModel();
         }
 
         string[] options;

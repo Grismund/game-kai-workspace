@@ -16,7 +16,7 @@ namespace game_kai_workspace
         {
             InitializeComponent();
             
-            BindingContext = viewModel;
+            BindingContext = App.Database.GetItemsAsync().Result;
         }
 
         private async void OnButtonClicked(object sender, EventArgs e)

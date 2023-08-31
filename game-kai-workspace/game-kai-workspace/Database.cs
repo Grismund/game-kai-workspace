@@ -17,9 +17,9 @@ namespace game_kai_workspace
             _database.CreateTableAsync<Item>();
         }
         
-        public Task<List<Item>> GetItemsAsync()
+        public async Task<List<Item>> GetItemsAsync()
         {
-            return _database.Table<Item>().ToListAsync();
+            return await _database.Table<Item>().ToListAsync();
         }
         
         public Task<List<Item>> GetObtainedItemsAsync()
