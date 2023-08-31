@@ -3,28 +3,28 @@ using System.Linq;
 using System.Threading.Tasks;
 using game_kai_workspace.Models;
 using SQLite;
-using SQLite.Net;
+// using SQLite.Net;
 
 namespace game_kai_workspace
 {
     public class Database
     {
-        private readonly SQLiteConnection _database;
+        private readonly SQLiteAsyncConnection _database;
 
         public Database(string dbPath)
         {
-            _database = new SQLiteConnection(dbPath);
-            _database.CreateTable<Item>();
+            _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Item>();
         }
         
         public Task<List<Item>> GetItemsAsync()
         {
-            return _database.Table<Item>().ToList();
+            return _database.Table<Item>().ToListAsync();
         }
         
-        public Task<List<Items>> GetObtainedItemsAsync()
+        public Task<List<Item>> GetObtainedItemsAsync()
         {
-            return _database.Query<Items>("SELECT * FROM [Items] WHERE [Status] = "Obtained"");
+            return _database.QueryAsync<Item>("SELECT * FROM [Items] WHERE [Status] = 'Obtained'");
         }
     }
 }

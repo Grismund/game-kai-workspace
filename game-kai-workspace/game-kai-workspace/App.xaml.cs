@@ -11,15 +11,19 @@ namespace game_kai_workspace
     {
         private static Database database;
         
-        
-        // public static SQLiteConnection DatabaseConnection { get; private set; }
-        //     
-        //     string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "game-kai-workspace.db3");
-        //     
-        //     DatabaseConnection = new SQLiteConnection(databasePath);
-        //
-        //     DatabaseConnection.CreateTable<Item>();
-        //
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "game-kai-workspace.db3"));
+                }
+
+                return database;
+            }
+        }
+
         public App ()
         {
             InitializeComponent();
