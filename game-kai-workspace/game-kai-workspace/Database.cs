@@ -26,5 +26,10 @@ namespace game_kai_workspace
         {
             return _database.QueryAsync<Item>("SELECT * FROM [Items] WHERE [Status] = 'Obtained'");
         }
+
+        public Task<int> SaveItemAsync(Item item)
+        {
+            return _database.InsertAsync(item);
+        }
     }
 }
