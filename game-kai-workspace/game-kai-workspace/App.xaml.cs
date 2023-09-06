@@ -9,7 +9,7 @@ namespace game_kai_workspace
         public App ()
         {
             InitializeComponent();
-
+            
             MainPage = new MainPage();
         }
 

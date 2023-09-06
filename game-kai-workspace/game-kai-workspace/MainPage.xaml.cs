@@ -55,10 +55,10 @@ namespace game_kai_workspace
 
         private void AddItemToInventory(int selectedOptionIndex)
         {
-            if (selectedOptionIndex > 0)
-            {
-                this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex.ToString()).Status = Item.ItemStatus.Obtained;
-            }
+            // if (selectedOptionIndex > 0)
+            // {
+            //     this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex.ToString()).Status = Item.ItemStatus.Obtained;
+            // }
         }
     }
 }
