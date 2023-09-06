@@ -1,4 +1,5 @@
 ﻿using System;
+using game_kai_workspace.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,8 @@ namespace game_kai_workspace
         public App ()
         {
             InitializeComponent();
+            
+            ItemsViewModel.SeedDatabase();
             
             MainPage = new MainPage();
         }

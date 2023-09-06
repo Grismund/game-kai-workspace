@@ -15,6 +15,8 @@ namespace game_kai_workspace
             InitializeComponent();
             
             viewModel = new ItemsViewModel();
+
+            ItemsViewModel.GetAllItems();
         }
 
         string[] options;
@@ -49,7 +51,7 @@ namespace game_kai_workspace
 
             mainText.Text = options[selectedOptionIndex];
             
-            AddItemToInventory(selectedOptionIndex);
+            // AddItemToInventory(selectedOptionIndex);
             
         }
 
