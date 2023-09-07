@@ -57,7 +57,7 @@ namespace game_kai_workspace
         {
             if (selectedOptionIndex > 0)
             {
-                this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex.ToString()).Status = Item.ItemStatus.Obtained;
+                this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex).Status = Item.ItemStatus.Obtained;
             }
         }
     }
