@@ -26,7 +26,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40" />
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label
@@ -35,7 +35,9 @@
                     Margin="30"
                     Text="Kai's workspace is a mess. As bad as it looks, there are signs that she (or someone) was here not too long ago."
                     HorizontalOptions="Center"
-                    TextColor="Bisque"/>
+                    TextColor="Bisque"
+                    BackgroundColor="#2A3F4280"
+                    />
                 <Picker 
                     x:Name="picker"
                     Grid.Row="2"
