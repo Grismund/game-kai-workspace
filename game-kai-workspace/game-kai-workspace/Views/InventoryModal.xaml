@@ -53,7 +53,7 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Padding="20, 0, 20, 0"
-                Clicked="OnButtonClicked"
+                Clicked="OnCloseInventoryClicked"
                 BackgroundColor="Brown"
                 TextColor="#193335"
             />

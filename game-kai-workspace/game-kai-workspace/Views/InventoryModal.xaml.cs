@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace game_kai_workspace
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InventoryModal : ContentPage
+    public partial class InventoryModal
     {
         public InventoryModal(ItemsViewModel viewModel)
         {
@@ -19,7 +19,7 @@ namespace game_kai_workspace
             BindingContext = viewModel;
         }
 
-        private async void OnButtonClicked(object sender, EventArgs e)
+        private async void OnCloseInventoryClicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
