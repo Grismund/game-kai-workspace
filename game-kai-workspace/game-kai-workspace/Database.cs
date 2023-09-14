@@ -53,9 +53,11 @@ namespace game_kai_workspace
             return items;
         }
         
-        public static async Task UpdateItem()
+        public static async Task UpdateItem(Item item)
         {
             await InitializeDb();
+            
+            await dbConnection.UpdateAsync(item);
         }
     }
 }

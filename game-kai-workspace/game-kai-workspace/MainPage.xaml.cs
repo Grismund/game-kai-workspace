@@ -45,7 +45,7 @@ namespace game_kai_workspace
                 "You put the tape into the player. It's a home video. You see Kai working at her desk. She turns around and smiles, the camera drops, and the tape plays static.",
                 "The beakers smell distinctly chemical. The liquid's color matches a bottle of pills next to them. Perhaps a home-brewed medicine? \n\nPills added to inventory.",
                 "It's an old-fashioned camera, but there's an unusual slot on the side. You retrieve a mysterious SD card. It could have clues. \n\nSD-Card added to inventory.",
-                "This sushi is old, and the cat hasn't touched it. Probably not a good idea. As you toss it in the trash you notice a picture in the waste bin. A young girl. Kais a daughter? \n\nPhotograph added to inventory."
+                "This sushi is old, and the cat hasn't touched it. Probably not a good idea to eat it. As you toss it into the trash, you notice a crumpled photograph in the waste bin. A young girl. Kai's daughter? \n\nPhotograph added to inventory."
             };
 
             mainText.Text = options[selectedOptionIndex];
@@ -58,7 +58,11 @@ namespace game_kai_workspace
         {
             if (selectedOptionIndex > 0)
             {
-                this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex).Status = Item.ItemStatus.Obtained;
+                Item selectedItem = this.viewModel.Items.FirstOrDefault(item => item.Id == selectedOptionIndex);
+                
+                selectedItem.Status = Item.ItemStatus.Obtained;
+                
+                ItemsViewModel.UpdateItem(selectedItem);
             }
         }
     }

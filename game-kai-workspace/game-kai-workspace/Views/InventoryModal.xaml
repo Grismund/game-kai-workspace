@@ -13,7 +13,10 @@
         <StackLayout
             Padding="20">
             <Label 
-                Text="You have 0 items in your inventory."
+                Text="Inventory"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Brown"
                 HorizontalOptions="CenterAndExpand" />
             <ListView 
                 ItemsSource="{Binding ObtainedItems}"

@@ -27,6 +27,11 @@ namespace game_kai_workspace.ViewModels
             }
         }
 
+        public static async void UpdateItem(Item item)
+        {
+            await Database.UpdateItem(item);
+        }
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
