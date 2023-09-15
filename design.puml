@@ -1,0 +1,12 @@
+@startuml
+!theme cerulean
+
+View->ViewModel : MainPage() init calls LoadItems()
+ViewModel->Database : GetItems()
+Database->ViewModel : return all items
+View->ViewModel : Picker UpdateItem(selectedItem)
+ViewModel->Database : UpdateItem(selectedItem)
+View->ViewModel : Open Inventory ObservableCollection<Item> ObtainedItems
+ViewModel->View : All Obtained Items
+
+@enduml
